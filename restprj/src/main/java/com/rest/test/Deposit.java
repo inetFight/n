@@ -14,7 +14,6 @@ import javax.ws.rs.core.Response;
 
 @Path("/deposit")
 public class Deposit {
-
 	@GET
 	@Path("/{username}")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -24,11 +23,8 @@ public class Deposit {
 			if (User.u[i] != null)
 				if (User.u[i].getName().equals(username) == true) {
 					return "User " + User.u[i].getName() + " has " + User.u[i].getDeposit() + " on deposit";
-
 				}
-
 		}
-
 		return "User not found";
 	}
 
@@ -42,7 +38,6 @@ public class Deposit {
 					User.u[i].setDeposit(dep);
 					return " deposit " + User.u[i].getName() + " increased on " + dep + " . Deposit = "
 							+ User.u[i].getDeposit();
-
 				}
 			}
 		}
